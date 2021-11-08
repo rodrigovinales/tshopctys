@@ -1,35 +1,33 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import logoNav from "../img/LOGO.png"
+import logoNav from "../img/LOGO.png";
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
 
 const NavComponent = () => {
   return (
 
     <div className="contenedorNav">
-      <img src={logoNav} className="logoNav" alt="logoNav"/>
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul className="navbar-nav nav-pills mr-auto mt-2 mt-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" href="./index.html">INICIO</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="./pages/productos.html">PRODUCTOS</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="./pages/contacto.html">CONTACTO</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+      <Navbar expand="sm" collapseOnSelect>
+        <Navbar.Brand>
+          <img src={logoNav} className="logoNav" alt="logoNav"/> {' '}
+        </Navbar.Brand>
+        <Navbar.Toggle/>
+        <Navbar.Collapse>
+          <Nav>
+          <Nav.Link href="#index">INICIO</Nav.Link>
+            <NavDropdown title="Productos">
+              <NavDropdown.Item href="#productos/monitores">Insumos</NavDropdown.Item>
+              <NavDropdown.Item href="#productos/teclados">Teclados</NavDropdown.Item>
+              <NavDropdown.Item href="#productos/mouses">Mouses</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#productos/pcnb">Computadoras / Notebooks</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#ofertas">Ofertas</Nav.Link>
+            <Nav.Link href="#contacto">Contacto</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
-
   )
 }
 
