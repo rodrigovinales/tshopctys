@@ -24,14 +24,21 @@
   margin: 0 20px 0 20px;
   text-align: center;  
 }
-/* 
+
 @media (prefers-reduced-motion: no-preference) {
-  .logoNav:hover {
-    animation: App-logo-spin infinite 30s linear;
+  .styloCarrito {
+    animation: App-logo-spin infinite 5s linear;
   }
   
-} */
-
+} 
+.styloCarrito{
+  font-size: 3rem;
+  color: #3e4142;
+}
+.numeroCarrito{
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+}
 .App-header {
   background-image: linear-gradient(to right, #F5FAFC, #46A3C3);
   /* min-height: 100vh; */
@@ -52,6 +59,6 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateY(180deg);
   }
 }
