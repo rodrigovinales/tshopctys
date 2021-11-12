@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 
-const ItemlistContainer = () => {
-
-    return <h5 className="numeroCarrito">5 </h5>
+class mostrarSaludo extends Component {
+  render() {
+    return <h2>{this.props.mensaje}</h2>;
+  }
 }
 
-
-export default ItemlistContainer;
+export default mostrarSaludo;

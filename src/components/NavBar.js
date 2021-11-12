@@ -2,7 +2,6 @@ import React from 'react';
 import logoNav from "../img/LOGO.png";
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import CartWidget from './CartWidget';
-import ItemlistContainer from "./ItemListContainer";
 
 
 const NavComponent = () => {
@@ -28,7 +27,6 @@ const NavComponent = () => {
             <Nav.Link href="#contacto">Contacto</Nav.Link>
           </Nav>
           <CartWidget />
-          <ItemlistContainer/>
 
         </Navbar.Collapse>
       </Navbar>
