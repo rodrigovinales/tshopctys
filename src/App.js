@@ -15,7 +15,7 @@ function App() {
         <img src={logoHeader} className="logoHeader col-6" alt="logoHeader" />
       </header>
       <NavBar />
-      <ItemlistContainer mensaje="Saludo enviado desde app.js utilizando componente de clase y props."/>
+      <ItemlistContainer mensaje="saludo enviado desde app.js utilizando componente de clase, una constante y props."/>
 
       <h1> Clase 4 - Componentes I </h1>
       <p>
