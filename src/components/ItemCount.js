@@ -12,6 +12,9 @@ const ItemCount = ({ stock, onAdd }) => {
         if (conteo + 1 <= stock) {
             setConteo(conteo + 1);
         }
+        else if (conteo === stock) {
+            console.log("No hay mas productos en stock")
+        }
         else {
             setConteo(conteo)
         }
@@ -21,13 +24,17 @@ const ItemCount = ({ stock, onAdd }) => {
         if (conteo - 1 >= 1) {
             setConteo(conteo - 1)
         }
+        else if (conteo === 1){
+            console.log("Has llegado al minimo para la compra")
+        }
         else {
             setConteo(1);
         };
     }
     const agregar = () => {
         // onAdd(conteo);
-        console.log("La funcion no realiza ninguna tarea por el momento");
+        console.log(`gracias por la compra de ${conteo} unidades`)
+
     }
 
     return <div>
@@ -38,12 +45,11 @@ const ItemCount = ({ stock, onAdd }) => {
                 <p className="card-text">El stock actual del producto es de 7 unidades</p>
 
                 <div className="botonera">
-                    <i onClick={restarCantidad}><img className="boton-eliminarItem" src={minus} alt="restar"/></i>
+                    <i onClick={restarCantidad}><img className="boton-eliminarItem" src={minus} alt="restar" /></i>
                     <p className="conteo">{conteo}</p>
-                    <i onClick={sumarStock}><img className="boton-sumarItem" src={add} alt="sumar"/></i>
+                    <i onClick={sumarStock}><img className="boton-sumarItem" src={add} alt="sumar" /></i>
                 </div>
                 <button className="btn btn-lg btn-dark" onClick={agregar}>Agregar al carrito</button>
-
             </div>
         </div>
 
