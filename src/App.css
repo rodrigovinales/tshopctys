@@ -62,3 +62,26 @@
     transform: rotateY(180deg);
   }
 }
+.botonera {
+  display:flex;
+  justify-content: center;
+}
+.conteo {
+  font-size: larger;
+  margin: 10px;
+}
+
+.boton-eliminarItem {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color:red;
+  border-radius: 50%;
+}
+.boton-sumarItem{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;   
+  background-color: green;
+  border-radius: 50%;
+}
