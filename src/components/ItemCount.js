@@ -4,8 +4,8 @@ import add from "../img/icon/add.png";
 import minus from "../img/icon/minus.png";
 
 
-const ItemCount = ({ stock, onAdd }) => {
-    const [inicial, setInicial] = useState(1);
+const ItemCount = ({ stock, inicioCont, onAdd }) => {
+    const [inicial, setInicial] = useState(inicioCont);
         
     const sumarStock = ()=> inicial+1 <= stock ? setInicial(inicial + 1) ? setInicial(inicial) : inicial === stock : console.log("No hay mas productos en Stock")  ;
 
