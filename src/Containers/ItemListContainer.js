@@ -9,7 +9,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     setTimeout(() => {
-        fetch("./i2nventario.json")
+        fetch("./inventario.json")
           .then(res => res.json())
         .then(datos => {
               setProductos(datos);
