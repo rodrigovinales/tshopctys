@@ -15,6 +15,8 @@ const ItemListContainer = () => {
         .then(datos => {
           setProductos(datos);
         })
+        .catch(err => console.log(err))
+        .finally (console.log("Lista Completada"))
   
     },3000);
   }, [])
