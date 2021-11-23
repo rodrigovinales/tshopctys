@@ -9,22 +9,18 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     setTimeout(() => {
-
-       fetch("./inventario.json")
-        .then(res => res.json())
+        fetch("./i2nventario.json")
+          .then(res => res.json())
         .then(datos => {
-          setProductos(datos);
-        })
-        .catch(err => console.log(err))
-        .finally (console.log("Lista Completada"))
-  
-    },3000);
-  }, [])
-
-
+              setProductos(datos);
+            })
+            .catch(err => console.log("el Error es el siguiente", err))
+        }, 3000);
+      }, [])
+    
   return <>
     {/* <ItemCount stock={7} inicioCont={1} /> */}
-   
+
     <ItemList items={productos} />
 
 
