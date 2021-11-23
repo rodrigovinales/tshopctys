@@ -20,8 +20,7 @@ function App() {
         Hola, este es el proyecto de la Clase 6 subida al gitHub.
       </p>
       <hr/>
-      <span> Se utiliza API de Marvel (Solicita Key y Hash5, por eso tuve que declarar variables para tomar ese valor). Y Muestra el listado en 3 segundos</span>
-      <p> En la linea 9 de Item.js tuve que utilizar esa extension, ya que viene por separado lo que es thumbnail, extension y path de este array de objetos en particular.</p>
+      <span> Se utiliza JSON para mostrar el listado con sus datos. Y Muestra el listado en 3 segundos</span>
       <ComponenteFooter/>
 
     </div>
