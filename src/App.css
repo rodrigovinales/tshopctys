@@ -85,3 +85,8 @@
   background-color: green;
   border-radius: 50%;
 }
+.list_products {
+  display: inline-flex;
+  width: 200px;
+  margin: 20px;
+}

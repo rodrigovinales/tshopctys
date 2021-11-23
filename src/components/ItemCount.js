@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ssd240 from "../img/productos/ssd240.jpg";
+import ssd240 from "../Assets/img/productos/ssd240gb.jpg";
 import add from "../img/icon/add.png";
 import minus from "../img/icon/minus.png";
 

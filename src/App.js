@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import logoHeader from "./img/LOGOshopcomputers.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ItemlistContainer from "./components/ItemListContainer";
+import ItemlistContainer from "./Containers/ItemListContainer";
 import ComponenteFooter from "./components/ComponenteFooter";
 
 
@@ -15,13 +15,13 @@ function App() {
       </header>
       <NavBar />
       <ItemlistContainer />
-      <h1> Clase 5 - Componentes II </h1>
+      <h1> Clase 6 - Promises, asincronía y MAP </h1>
       <p>
-        Hola, este es el proyecto de la Clase 5 subida al gitHub.
+        Hola, este es el proyecto de la Clase 6 subida al gitHub.
       </p>
       <hr/>
-      <span> Se adiciona ItemCount.js para la funcionalidad de sumar o restar cantidad de productos.</span>
-      <p> Se lo importa en ItemlistContainer.js </p>
+      <span> Se utiliza API de Marvel (Solicita Key y Hash5, por eso tuve que declarar variables para tomar ese valor). Y Muestra el listado en 3 segundos</span>
+      <p> En la linea 9 de Item.js tuve que utilizar esa extension, ya que viene por separado lo que es thumbnail, extension y path de este array de objetos en particular.</p>
       <ComponenteFooter/>
 
     </div>
