@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({categoria, imagen, precio, nombre }) => {
     return (
         <div className="list_products">
             <div className="card" style={{ width: 288 }}>
-                <h6>CATEGORIA: {item.categoria}</h6>
-                <img src={`${process.env.PUBLIC_URL}/productos/${item.imagen}`} className="card-img-top" alt="" />
-                <p className="card-title">{item.nombre}</p>
+                <h6>CATEGORIA: {categoria}</h6>
+                <img src={`${process.env.PUBLIC_URL}/productos/${imagen}`} className="card-img-top" alt="" />
+                <p className="card-title">{nombre}</p>
                 <div className="card-body">
-                    <h4 className="btn btn-success"> Precio u$s {item.precio} </h4>
+                    <h4 className="btn btn-sm btn-outline-danger disabled"> Precio u$s {precio} </h4>
                 </div>
                     <button className="btn btn-success btn-sm">COMPRAR</button>
-                    <button className="btn btn-warning btn-sm">VER DETALLE</button>
+                    <Link to="/Productos" className="btn btn-info btn-sm"> VOLVER </Link>
             </div>
         </div>
     )

@@ -1,30 +1,36 @@
 import React from "react";
 import './App.css';
 import NavBar from './components/NavBar';
-import logoHeader from "./img/LOGOshopcomputers.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import ItemlistContainer from "./Containers/ItemListContainer";
+import ItemlistContainer from "./Containers/ItemListContainer";
 import ItemDetailContainer from "./Containers/ItemDetailContainer";
 import ComponenteFooter from "./components/ComponenteFooter";
+import Contacto from "./components/Contacto";
+import Inicio from "./components/Inicio"
+
+
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logoHeader} className="logoHeader col-6" alt="logoHeader" />
-      </header>
-      <NavBar />
-      {/* <ItemlistContainer /> */}
-      <ItemDetailContainer />
-      <h1> Clase 7 - Consumiendo APIs </h1>
-      <p>
-        Hola, este es el proyecto de la Clase 7 subida al gitHub.
-      </p>
-      <hr/>
-      <ComponenteFooter/>
+    <BrowserRouter>
+      <div className="container">
+        
 
-    </div>
+        <NavBar />
+        <Routes>
+          <Route path="/" exact element={<Inicio />}/>
+          <Route path="/productos" element={ <ItemlistContainer /> }/>
+          <Route path="/detail/:itemId" element={ <ItemDetailContainer />} />
+          <Route path="/contacto" element={<Contacto/>} />
+        </Routes>
+        <hr />
+
+        <ComponenteFooter />
+      </div>
+    </BrowserRouter>
   );
 }
 

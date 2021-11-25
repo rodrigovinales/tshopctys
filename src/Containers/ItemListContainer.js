@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 // import ItemCount from "../components/ItemCount";
 import ItemList from "../components/ItemList/ItemList";
+import GetDatos from "../helpers/GetDatos"
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([])
 
   useEffect(() => {
     setTimeout(() => {
-        fetch("./inventario.json")
-          .then(res => res.json())
+        GetDatos()
         .then(datos => {
               setProductos(datos);
             })
             .catch(err => console.log("el Error es el siguiente", err))
-        }, 3000);
+        },);
       }, [])
     
   return <>

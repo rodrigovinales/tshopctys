@@ -1,6 +1,7 @@
+const Productos = 
 [ 
     {
-      "id": "1",
+      "id": 1,
       "ean": "7445216986224",
       "imagen": "gmrc.jpg",
       "categoria": "MOUSE",
@@ -82,5 +83,4 @@
     
   ]
   
-
-  
+  export default Productos;
