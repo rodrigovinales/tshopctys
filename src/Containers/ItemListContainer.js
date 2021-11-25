@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 // import ItemCount from "../components/ItemCount";
 import ItemList from "../components/ItemList/ItemList";
 
-
-
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([])
 

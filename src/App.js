@@ -3,7 +3,8 @@ import './App.css';
 import NavBar from './components/NavBar';
 import logoHeader from "./img/LOGOshopcomputers.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ItemlistContainer from "./Containers/ItemListContainer";
+// import ItemlistContainer from "./Containers/ItemListContainer";
+import ItemDetailContainer from "./Containers/ItemDetailContainer";
 import ComponenteFooter from "./components/ComponenteFooter";
 
 
@@ -14,13 +15,13 @@ function App() {
         <img src={logoHeader} className="logoHeader col-6" alt="logoHeader" />
       </header>
       <NavBar />
-      <ItemlistContainer />
-      <h1> Clase 6 - Promises, asincronía y MAP </h1>
+      {/* <ItemlistContainer /> */}
+      <ItemDetailContainer />
+      <h1> Clase 7 - Consumiendo APIs </h1>
       <p>
-        Hola, este es el proyecto de la Clase 6 subida al gitHub.
+        Hola, este es el proyecto de la Clase 7 subida al gitHub.
       </p>
       <hr/>
-      <span> Se utiliza JSON para mostrar el listado con sus datos. Y Muestra el listado en 3 segundos</span>
       <ComponenteFooter/>
 
     </div>
