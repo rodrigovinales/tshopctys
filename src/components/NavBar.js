@@ -34,7 +34,7 @@ const NavComponent = () => {
                 <li><Link to="productos/TECLADOS">Teclados</Link></li>
                 <li><Link to="productos/ALMACENAMIENTO">Almacenamiento</Link></li>
             </ul>
-            <CartWidget />
+            <Link to="cart"><CartWidget/></Link>
 
           </Navbar.Collapse>
         </Navbar>

@@ -6,8 +6,10 @@ import GetDatos from "../helpers/GetDatos"
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([])
   const { catId } = useParams();
+  const [cargando, setCargando] = useState(false)
 
   useEffect(() => {
+    setCargando(true)
     setTimeout(() => {
       GetDatos()
         .then(datos => {
@@ -19,12 +21,18 @@ const ItemListContainer = () => {
           }
         })
         .catch(err => console.log("el Error es el siguiente", err))
-    });
+        .finally(() => {
+          setCargando(false)
+        });
+    }, 1000)
   }, [catId])
 
   return <>
 
-    <ItemList items={productos} />
+    {
+      cargando ? <h2 className="animateCargando"></h2> : <ItemList items={productos} />
+    }
+
   </>
 }
 
