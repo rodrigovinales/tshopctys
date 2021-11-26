@@ -4,7 +4,7 @@ const Productos =
       "id": 1,
       "ean": "7445216986224",
       "imagen": "gmrc.jpg",
-      "categoria": "MOUSE",
+      categoria: "MOUSE",
       "nombre": "MOUSE GENIUS ROJO USB",
       "precio": "3.70"
     },

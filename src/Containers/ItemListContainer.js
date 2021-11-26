@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from 'react';
-// import ItemCount from "../components/ItemCount";
+import { useParams } from 'react-router';
 import ItemList from "../components/ItemList/ItemList";
 import GetDatos from "../helpers/GetDatos"
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([])
+  const { catId } = useParams();
 
   useEffect(() => {
     setTimeout(() => {
-        GetDatos()
+      GetDatos()
         .then(datos => {
-              setProductos(datos);
-            })
-            .catch(err => console.log("el Error es el siguiente", err))
-        },);
-      }, [])
-    
+
+          if (!catId) {
+            setProductos(datos)
+          } else {
+            setProductos(datos.filter(prod => prod.categoria === catId))
+          }
+        })
+        .catch(err => console.log("el Error es el siguiente", err))
+    });
+  }, [catId])
+
   return <>
-    {/* <ItemCount stock={7} inicioCont={1} /> */}
 
     <ItemList items={productos} />
-
-
   </>
 }
-
-
 
 export default ItemListContainer;

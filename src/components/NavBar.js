@@ -5,12 +5,9 @@ import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom'
 import logoHeader from "../img/LOGOshopcomputers.png";
 
-
-
 const NavComponent = () => {
   return (
 
-    
     <header className="App-header">
         <Link to="/"><img src={logoHeader} className="logoHeader col-6" alt="logoHeader" /></Link>
         <Navbar expand="sm" collapseOnSelect>
@@ -32,6 +29,11 @@ const NavComponent = () => {
               <Nav.Link href="#ofertas">Ofertas</Nav.Link> */}
               <Link to="/contacto">Contacto</Link>
             </Nav>
+            <ul>
+                <li><Link to="productos/MOUSE">Mouses</Link></li>
+                <li><Link to="productos/TECLADOS">Teclados</Link></li>
+                <li><Link to="productos/ALMACENAMIENTO">Almacenamiento</Link></li>
+            </ul>
             <CartWidget />
 
           </Navbar.Collapse>

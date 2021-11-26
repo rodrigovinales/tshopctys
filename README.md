@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Primera Entrega del Proyecto Final
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La intencion del proyecto es mejorar el actual sitio web [ShopComputers](http://www.shopcomputers.com.ar/).
+La empresa es real, existiendo en la zona oeste del Gran Buenos Aires. Trata de venta de insumos informaticos.
 
-## Available Scripts
+## Librerias utilizadas.
 
-In the project directory, you can run:
+En este proyecto, por decision personal, utilizo librerias Bootstrap, y dando algunos estilos en Css.
 
-### `npm start`
+### `Ideas`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Como es un proyecto a mejorar tomando ciertas ideas de la pagina actual, se aprovecha la potencia de React JS para mejorar y optimizar el sitio. Logrando visualizar productos, navegar entre secciones y si lo requiere, concretar una compra online.
+Se arma un array con productos con valores como ID, EAN, PRECIO, CATEGORIA, NOMBRE. Para poder luego, interactuar con ellos para posibles busquedas, etc.
+Se deja sin modificar, la seccion Footer, la misma conteniendo datos importantes para que el usuario/visitante pueda acceder a comunicarse con la empresa.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Vista del usuario`
 
-### `npm test`
+La idea del proyecto, es presentar al usuario visitante, una bienvenida con ofertas semanales, el visitante puede visualizar los productos sea por categoria o clickeando en "VER DETALLES" para mas informacion. Con opciones de compra.
+Tambien se visualiza CONTACTO la cual obtiene el mapa de las sucursales.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Decisiones`
 
-### `npm run build`
+Tome la decision de utilizar Bootstrap por las opciones que ofrece, ademas de utilizarlo bastante en JS.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Sobre el proyecto`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+En el proyecto se implementa lo solicitado en clases, ademas de incluir un footer, logos e informacion reales.
+Si bien visualmente todavia no esta perfectamente logrado, se puede observar que cumple su funcion al solicitar por ejemplo, un detalle de un item en particular, mostrar todos los elementos existentes. Navegacion entre links.

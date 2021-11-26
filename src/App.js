@@ -7,11 +7,7 @@ import ItemDetailContainer from "./Containers/ItemDetailContainer";
 import ComponenteFooter from "./components/ComponenteFooter";
 import Contacto from "./components/Contacto";
 import Inicio from "./components/Inicio"
-
-
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 
 function App() {
   return (
@@ -23,7 +19,8 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Inicio />}/>
           <Route path="/productos" element={ <ItemlistContainer /> }/>
-          <Route path="/detail/:itemId" element={ <ItemDetailContainer />} />
+          <Route path="/productos/:catId" element={ <ItemlistContainer /> }/>
+          <Route path="/detalle/:itemId" element={ <ItemDetailContainer />} />
           <Route path="/contacto" element={<Contacto/>} />
         </Routes>
         <hr />

@@ -11,23 +11,18 @@ const ItemCount = ({ stock, inicioCont, onAdd }) => {
     const restarCantidad = () => inicial -1 >=1 ? setInicial(inicial -1) ? setInicial(1) : inicial === 1 : console.log("Has llegado al minimo para la compra");
     
     const agregar = () => {
-        onAdd(conteo);
+        // onAdd(conteo);
         // console.log(`gracias por la compra de ${inicial} unidades`)
     }
 
     return <div>
         <div className="card" style={{ width: 288 }}>
-            {/* <img src={ssd240} className="card-img-top" alt="ssd240" />
-            <div className="card-body">
-                <h5 className="card-title">SSD 240gb Gigabyte</h5>
-                <p className="card-text">El stock actual del producto es de {stock} unidades</p> */}
-
                 <div className="botonera">
                     <i onClick={restarCantidad}><img className="boton-eliminarItem" src={minus} alt="restar" /></i>
                     <p className="conteo">{inicial}</p>
                     <i onClick={sumarStock}><img className="boton-sumarItem" src={add} alt="sumar" /></i>
                 </div>
-                <button className="btn btn-lg btn-dark" onClick={agregar}>Agregar al carrito</button>
+                <button className="btn btn-sm btn-dark" onClick={agregar}>Agregar al carrito</button>
             </div>
         </div>
 
