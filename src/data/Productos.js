@@ -4,9 +4,10 @@ const Productos =
       "id": 1,
       "ean": "7445216986224",
       "imagen": "gmrc.jpg",
-      categoria: "MOUSE",
+      "categoria": "MOUSE",
       "nombre": "MOUSE GENIUS ROJO USB",
-      "precio": "3.70"
+      "precio": "3.70",
+      "stock" : 15
     },
     {
       "id":2,
@@ -14,7 +15,8 @@ const Productos =
       "imagen": "GTNC.jpg",
       "categoria": "TECLADOS",
       "nombre": "Teclado Mecanico Genius Smart Usb Kb-102 Español Para Pc",
-      "precio": 4.05
+      "precio": 4.05,
+      "stock" : 13
     },
     {
       "id":3,
@@ -22,7 +24,8 @@ const Productos =
       "imagen": "WEBCAM1000x.jpg",
       "categoria": "WEBCAM",
       "nombre": "Webcam Camara Genius Facecam 1000x Hd 720p Con Microfono Pc",
-      "precio": 18.51
+      "precio": 18.51,
+      "stock" : 5
     },
     {
       "id":4,
@@ -30,31 +33,35 @@ const Productos =
       "imagen": "FTATX850.jpg",
       "categoria": "FUENTES",
       "nombre": "FUENTE ATX 850W SENTEY MODULAR 80 PLUS",
-      "precio": 41.5
+      "precio": 41.5,
+      "stock" : 8
     },
     {
       "id":5,
       "ean": 7857851484215,
-      "categoria": "HP",
+      "categoria": "PARLANTES",
       "imagen": "tvparlantes.jpg",
       "nombre": "THONET VANDER SPIEL MADERA",
-      "precio": 80
+      "precio": 80,
+      "stock" : 3
     },
     {
       "id":6,
       "ean": 7852188966542,
       "imagen": "cartucho-negro-epson-135-original.jpg",
-      "categoria": "EPSON",
+      "categoria": "CARTUCHOS",
       "nombre": "CARTUCHO EPSON 135 NEGRO",
-      "precio": 9
+      "precio": 9,
+      "stock" : 34
     },
     {
       "id":7,
       "ean": 7541236784215,
       "imagen": "D_NQ_NP_884417-MLA31122952899_062019-O.jpg",
-      "categoria": "TONER ALTERNATIVO",
+      "categoria": "TONER",
       "nombre": "EVERTEC 85A",
-      "precio": 8.1
+      "precio": 8.1,
+      "stock" : 10
     },
     {
       "id":8,
@@ -62,7 +69,8 @@ const Productos =
       "imagen": "discoexterno.jpg",
       "categoria": "ALMACENAMIENTO",
       "nombre": "DISCO EXTERNO 1TB SEAGATE",
-      "precio": 45
+      "precio": 45,
+      "stock" : 7
     },
     {
       "id":9,
@@ -70,7 +78,8 @@ const Productos =
       "imagen": "MKheX.jpg",
       "categoria": "ROUTER",
       "nombre": "MIKROTIK HEX 941N2D",
-      "precio": 65
+      "precio": 65,
+      "stock" : 5
     },
     {
       "id":10,
@@ -78,7 +87,8 @@ const Productos =
       "imagen": "ssd240gb.jpg",
       "categoria": "ALMACENAMIENTO",
       "nombre": "DISCO SSD 240GB GIGABYTE",
-      "precio": 45
+      "precio": 45,
+      "stock" : 8
     }
     
   ]

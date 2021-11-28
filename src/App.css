@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 .App {
   text-align: center;
 }
@@ -42,7 +44,7 @@
 .App-header {
   background-image: linear-gradient(to right, #F5FAFC, #46A3C3);
   /* min-height: 100vh; */
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -65,30 +67,52 @@
 .botonera {
   display:flex;
   justify-content: center;
+  
 }
 .conteo {
-  font-size: larger;
+  font-size: 30px;
   margin: 10px;
 }
 
 .boton-eliminarItem {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   background-color:red;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .boton-sumarItem{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;   
   background-color: green;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .list_products {
-  display: inline-flex;
+  display:inline-table;
+  justify-content: space-around;
+  border-radius: 5px;
   width: 200px;
-  margin: 20px;
+  margin: 10px;
+  border: 2px solid black;
+}
+.stylingCard {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+.stylingCard_h6 {
+  font-size: 20px;
+}
+.stylingCard_ItemDetail {
+  background-color: whitesmoke;
+  text-align: center;
+  width: 300px;
+
+}
+.stylingItemDetail {
+  display: flex;
 }
 .mapFlex {
   display: flex;

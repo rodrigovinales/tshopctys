@@ -12,15 +12,15 @@ const ItemCount = ({ stock, inicioCont, onAdd }) => {
     
     const agregar = () => {
         // onAdd(conteo);
-        // console.log(`gracias por la compra de ${inicial} unidades`)
+        console.log(`gracias por la compra de ${inicial} unidades`)
     }
 
     return <div>
-        <div className="card" style={{ width: 288 }}>
+        <div className="card">
                 <div className="botonera">
-                    <i onClick={restarCantidad}><img className="boton-eliminarItem" src={minus} alt="restar" /></i>
+                    <button className="btn btn-link" onClick={restarCantidad}><img className="boton-eliminarItem" src={minus} alt="restar" /></button>
                     <p className="conteo">{inicial}</p>
-                    <i onClick={sumarStock}><img className="boton-sumarItem" src={add} alt="sumar" /></i>
+                    <button className="btn -btn-link" onClick={sumarStock}><img className="boton-sumarItem" src={add} alt="sumar" /></button>
                 </div>
                 <button className="btn btn-sm btn-dark" onClick={agregar}>Agregar al carrito</button>
             </div>
