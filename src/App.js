@@ -12,10 +12,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
-        
-
+      <div className="container-fluid">
         <NavBar />
+        <hr/>
         <Routes>
           <Route path="/" exact element={<Inicio />}/>
           <Route path="/productos" element={ <ItemlistContainer /> }/>
@@ -24,7 +23,6 @@ function App() {
           <Route path="/contacto" element={<Contacto/>} />
         </Routes>
         <hr />
-
         <ComponenteFooter />
       </div>
     </BrowserRouter>
