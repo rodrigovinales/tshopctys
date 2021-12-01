@@ -96,6 +96,12 @@
   margin: 10px;
   border: 2px solid black;
 }
+.list_products span {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
 .stylingCard {
   text-align: center;
   font-size: 14px;
@@ -113,6 +119,11 @@
 }
 .stylingItemDetail {
   display: flex;
+}
+.stylingItemDetail span {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
 }
 .mapFlex {
   display: flex;

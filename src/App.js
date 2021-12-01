@@ -8,6 +8,7 @@ import ComponenteFooter from "./components/ComponenteFooter";
 import Contacto from "./components/Contacto";
 import Inicio from "./components/Inicio"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/productos" element={ <ItemlistContainer /> }/>
           <Route path="/productos/:catId" element={ <ItemlistContainer /> }/>
           <Route path="/detalle/:itemId" element={ <ItemDetailContainer />} />
+          <Route path="/cart" element= { <Cart /> } />
           <Route path="/contacto" element={<Contacto/>} />
         </Routes>
         <hr />

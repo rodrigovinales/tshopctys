@@ -1,9 +1,24 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from 'react-router-dom'
 import ItemCount from "../components/ItemCount";
 
+const ItemDetail = ({ categoria, imagen, precio, nombre, stock, id }) => {
 
-const ItemDetail = ({ categoria, imagen, precio, nombre, stock }) => {
+    const [cantidad, setCantidad] = useState(1)
+    const [agregado, setAgregado] = useState(false)
+
+    const agregoProducto = () => {
+        if (cantidad >= 1) {
+            console.log('Agregado!!', {id, cantidad, nombre, precio, categoria})
+            setAgregado(true)
+        }   
+        else {
+            alert("No puedes comprar " + cantidad + " items");
+        }
+    }
+
+
     return (
         <div className="stylingItemDetail">
             <div className="card stylingCard_ItemDetail">
@@ -11,11 +26,17 @@ const ItemDetail = ({ categoria, imagen, precio, nombre, stock }) => {
                 <img src={`${process.env.PUBLIC_URL}/productos/${imagen}`} className="card-img-top" alt="" />
                 <p className="card-title">{nombre}</p>
                 <div className="card-body">
-                    <h4 className="btn btn-sm btn-outline-danger disabled"> Precio u$s {precio} </h4>
+                <h4 className="btn btn-sm btn-success disabled"> Precio</h4>
+                    <br/>
+                    <span className="btn disabled">u$s {precio}</span>
                 </div>
-                    <button className="btn btn-sm btn-outline-success disabled"> STOCK DISPONIBLE: {stock}</button>
-                <ItemCount stock={stock} inicioCont={1} />
-                <Link to="/Productos" className="btn btn-info btn-sm"> VOLVER </Link>
+                    <button className="btn btn-outline-primary disabled"> STOCK DISPONIBLE: {stock}</button>
+                {
+                !agregado 
+                ?   <ItemCount stock={stock} cantidad={cantidad} setCantidad={setCantidad} onAdd={agregoProducto} />
+                :   <Link to="/cart" className="btn btn-success">Finalizar la compra</Link>
+            }
+                <Link to="/Productos" className="btn btn-info"> VOLVER </Link>
             </div>
         </div>
     )

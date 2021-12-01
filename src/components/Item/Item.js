@@ -9,7 +9,9 @@ const Item = ({ categoria, imagen, nombre, precio, id }) => {
                 <img src={`${process.env.PUBLIC_URL}/productos/${imagen}`} className="card-img-top" alt="imagen" />
                 <p className="card-title">{nombre}</p>
                 <div className="card-body">
-                    <h4 className="btn btn-sm btn-outline-danger disabled"> Precio u$s {precio} </h4>
+                    <h4 className="btn btn-sm btn-success disabled"> Precio</h4>
+                    <br/>
+                    <span className="btn disabled">u$s {precio}</span> 
                 </div>
                 <Link to={`/detalle/${id}`} className="btn btn-success btn-sm">VER DETALLE</Link>
             </div>

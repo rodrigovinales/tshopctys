@@ -18,7 +18,7 @@ const NavComponent = () => {
         <Nav>
           <NavLink className="dropdown-item" to="/">INICIO</NavLink>
           <NavLink className="dropdown-item" to="/productos/">PRODUCTOS</NavLink>
-          <NavDropdown title="CATEGORIAS" id="nav-dropdown" className="dropdown-item">
+          <NavDropdown title="CATEGORIAS" id="navbarScrollingDropdown">
             <NavLink className="dropdown-item" to="/productos/MOUSE">MOUSE</NavLink>
             <NavLink className="dropdown-item" to="/productos/TECLADOS">TECLADOS</NavLink>
             <NavLink className="dropdown-item" to="/productos/ALMACENAMIENTO">ALMACENAMIENTO</NavLink>
