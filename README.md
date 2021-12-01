@@ -26,3 +26,10 @@ Tome la decision de utilizar Bootstrap por las opciones que ofrece, ademas de ut
 
 En el proyecto se implementa lo solicitado en clases, ademas de incluir un footer, logos e informacion reales.
 Si bien visualmente todavia no esta perfectamente logrado, se puede observar que cumple su funcion al solicitar por ejemplo, un detalle de un item en particular, mostrar todos los elementos existentes. Navegacion entre links.
+
+### `Muestra del proyecto`
+
+https://www.loom.com/share/330f52d506a34bcda245131d1c630d3b
+
+Aqui comparto la muestra del proyecto. En la misma se puede observar que se realiza la navegacion en distintas solapas, actualizando el estado de la misma, o por categorias en este caso, teniendo un producto o mas, dependendiendo de la cantidad que exista en cada categoria.
+Luego al seleccionar un item, se puede elegir la cantidad (No pudiendo realizar el agregado al carrito si la cantidad es 0). Y al realizar "la compra" modifica el estado apareciendo la leyendo "FINALIZAR COMPRA" y pasando al carrito. Donde a futuro se mostrará un listado de productos seleccionados.
