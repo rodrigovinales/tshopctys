@@ -33,3 +33,13 @@ https://www.loom.com/share/330f52d506a34bcda245131d1c630d3b
 
 Aqui comparto la muestra del proyecto. En la misma se puede observar que se realiza la navegacion en distintas solapas, actualizando el estado de la misma, o por categorias en este caso, teniendo un producto o mas, dependendiendo de la cantidad que exista en cada categoria.
 Luego al seleccionar un item, se puede elegir la cantidad (No pudiendo realizar el agregado al carrito si la cantidad es 0). Y al realizar "la compra" modifica el estado apareciendo la leyendo "FINALIZAR COMPRA" y pasando al carrito. Donde a futuro se mostrará un listado de productos seleccionados.
+
+
+### `Modificaciones Clase 10 CartContext`
+
+Se aplica lo que es custom Provider, utilizandolo en App.js y utilizando CartContext.js
+Se aplica libreria adicionales para complementar la vista del sitio, usando SweetAlert.
+Se logra la logica de agregado por items, eliminado de cada item en el listado de carrito, eliminado completo del listado si asi lo requiera, todo utilizando botones para tal fin. Logrando renderizar el carrito al valor actual.
+Se utiliza la logica de en caso de producto existente, no se agrega a carrito, dejando el boton directo a FINALIZAR COMPRA, en caso de no estar en carrito, se habilita el poder seleccionar la cantidad e ingresarlo a carrito.
+Dejo a mi criterio, la visualizacion en carrito en forma de tabla, mostrando nombre, precio e imagen.
+Se utiliza JSON LocalStorage para poder guardar los items..

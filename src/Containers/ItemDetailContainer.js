@@ -10,6 +10,7 @@ const ItemDetailContainer = () => {
 
   const { itemId } = useParams()
 
+  
   useEffect(() => {
    
       GetDatos() 
