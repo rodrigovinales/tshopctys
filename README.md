@@ -6,6 +6,7 @@ La empresa es real, existiendo en la zona oeste del Gran Buenos Aires. Trata de 
 ## Librerias utilizadas.
 
 En este proyecto, por decision personal, utilizo librerias Bootstrap, y dando algunos estilos en Css.
+Se utiliza para dar estilo de confirmacion, entre otros, la libreria SweetAlert.
 
 ### `Ideas`
 
@@ -43,3 +44,6 @@ Se logra la logica de agregado por items, eliminado de cada item en el listado d
 Se utiliza la logica de en caso de producto existente, no se agrega a carrito, dejando el boton directo a FINALIZAR COMPRA, en caso de no estar en carrito, se habilita el poder seleccionar la cantidad e ingresarlo a carrito.
 Dejo a mi criterio, la visualizacion en carrito en forma de tabla, mostrando nombre, precio e imagen.
 Se utiliza JSON LocalStorage para poder guardar los items..
+
+En la correccion se adiciona visualizar listado en Cart.js, y mejorando el estilo de DetailItem.
+Se agrega input para busquedas de productos coincidentes con los caracteres respecto a su nombre, utilizando filter e includes.

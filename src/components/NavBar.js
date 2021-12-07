@@ -22,9 +22,12 @@ const NavComponent = () => {
             <NavLink className="dropdown-item" to="/productos/MOUSE">MOUSE</NavLink>
             <NavLink className="dropdown-item" to="/productos/TECLADOS">TECLADOS</NavLink>
             <NavLink className="dropdown-item" to="/productos/ALMACENAMIENTO">ALMACENAMIENTO</NavLink>
+            <NavLink className="dropdown-item" to="/productos/ROUTER">ROUTER</NavLink>
+            <NavLink className="dropdown-item" to="/productos/PARLANTES">PARLANTES</NavLink>
             <NavDropdown.Divider />
             <NavDropdown.Item>OFERTAS</NavDropdown.Item>
           </NavDropdown>
+          
           <NavLink className="dropdown-item" to="/contacto">CONTACTO</NavLink>
         </Nav>
         <Link to="cart"><CartWidget /></Link>

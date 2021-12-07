@@ -1,12 +1,9 @@
 import React, { useContext } from "react";
 import { CartContext } from "../components/Context/CartContext"
 
-
-
 const Cart = () => {
 
-    const { carrito, vaciarCarrito, removeItem } = useContext(CartContext)
-
+    const { carrito, vaciarCarrito, removeItem, calcularTotal } = useContext(CartContext)
     return (
         <div className="container mt-5" align="center">
 
@@ -34,23 +31,18 @@ const Cart = () => {
                                     <td>{e.cantidad}</td>
                                     <td>{e.precio}</td>
                                     <td><img src={`${process.env.PUBLIC_URL}/productos/${e.imagen}`} alt={e.nombre} width="50px" className="img-fluid" /></td>
-                                    <td><button className="btn btn-sm btn-warning" onClick={() => removeItem(e.id)}>QUITAR</button></td>
+                                    <td className="botonRemoveItem" onClick={() => removeItem(e.id)}>REMOVER</td>
                                 </tr>
-
                             ))}
-                            <button className="btn btn-danger" onClick={vaciarCarrito}>VACIAR CARRITO</button>
                         </tbody>
-
                     </table>
-
+                    <button className="btn btn-danger" onClick={vaciarCarrito}>VACIAR CARRITO</button>
+                    <hr></hr>
+                    <h4 className="btn btn-success disabled">PRECIO TOTAL: $ {calcularTotal().toFixed(2)}</h4>
                 </div>
-
             </div>
-
         </div>
-
     )
-
 }
 
 export default Cart;
