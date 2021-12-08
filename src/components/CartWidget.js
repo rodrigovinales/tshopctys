@@ -7,6 +7,10 @@ const CartWidget = () => {
 
    const { calcularCantidad} = useContext(CartContext)
 
+   if (calcularCantidad() === 0 ) {
+      return <FaCartPlus className="styloCarritoVacio"/>
+   }
+
    return (
       <div>
          <FaCartPlus className="styloCarrito"/>

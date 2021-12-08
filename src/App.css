@@ -37,6 +37,10 @@
   font-size: 3rem;
   color: #3e4142;
 }
+.styloCarritoVacio {
+  visibility: hidden;
+}
+
 .numeroCarrito{
   font-weight: 900;
   font-family: 'Courier New', Courier, monospace;
@@ -138,11 +142,22 @@
   border-radius: 5px;
   margin: 5px;
 }
-.imgItemDetail{
+.imgItemDetail ,.stylingItemDetail{
   display: flex;
 }
-.stylingItemDetail {
-  display: flex;
+.carritoVacioDetail {
+  display: block;
+  text-align: -webkit-center;
+}
+.carritoVacioMsg {
+  font-size: 4rem;
+  background-color: rgb(228, 41, 41);
+  width: 30%;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 .stylingItemDetail span {
   font-size: 25px;
