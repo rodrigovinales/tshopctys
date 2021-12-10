@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react'
-import GetDatos from "../helpers/GetDatos"
+// import GetDatos from "../helpers/GetDatos"
 import ItemList from "../components/ItemList/ItemList";
 import { LoaderContext } from '../components/Context/LoaderContext';
 import { useParams } from 'react-router';
+import { collection, getDocs, query, where } from 'firebase/firestore/lite'
+import { db } from "../Firebase/Config";
 
 const ItemListContainer = () => {
 
@@ -15,34 +17,36 @@ const ItemListContainer = () => {
         setBusqueda(e.target.value)
     }
 
-    useEffect(() => {
-        setCargando(true)
-        setTimeout(() => {
-            GetDatos()
-                .then(datos => {
-                    if (!busqueda) {
-                        setProductos(datos)
-                    } else {
-                        setProductos(datos.filter(prod => prod.nombre.toLowerCase().includes(busqueda.toLowerCase())))
-                    }
-                })
-                .finally(() => {
-                    setCargando(false)
-                });
-        }, 500)
-    }, [busqueda])
+    // useEffect(() => {
+    //     setCargando(true)
+    //     setTimeout(() => {
+    //         GetDatos()
+    //             .then(datos => {
+    //                 if (!busqueda) {
+    //                     setProductos(datos)
+    //                 } else {
+    //                     setProductos(datos.filter(prod => prod.nombre.toLowerCase().includes(busqueda.toLowerCase())))
+    //                 }
+    //             })
+    //             .finally(() => {
+    //                 setCargando(false)
+    //             });
+    //     }, 500)
+    // }, [busqueda])
 
     useEffect(() => {
         setCargando(true)
         setTimeout(() => {
-            GetDatos()
-                .then(datos => {
-
-                    if (!catId) {
-                        setProductos(datos)
-                    } else {
-                        setProductos(datos.filter(prod => prod.categoria === catId))
-                    }
+            const productosRef = collection(db, "productos")
+            const q = catId ? query(productosRef, where('categoria', '==', catId)) : productosRef
+            getDocs(q)
+                .then((snapshot) => {
+                    const items = snapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        ...doc.data()
+                    })
+                    )
+                    setProductos(items)
                 })
                 .catch(err => console.log("el Error es el siguiente", err))
                 .finally(() => {
@@ -53,7 +57,7 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
-            <form>
+            {/* <form>
                 <input
                     className="form-control"
                     type="text"
@@ -61,7 +65,7 @@ const ItemListContainer = () => {
                     value={busqueda}
                     onChange={handleChange}
                 />
-            </form>
+            </form> */}
             {
                 cargando
                     ?

@@ -27,7 +27,7 @@ const ItemDetail = ({ categoria, imagen, imagen2, precio, nombre, stock, id, des
                 imageUrl: `${process.env.PUBLIC_URL}/productos/${imagen}`,
                 imageWidth: 200,
                 imageHeight: 200,
-                timer: 2000
+                timer: 1500
             })
         }
         else {
