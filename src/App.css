@@ -26,13 +26,13 @@
   margin: 0 20px 0 20px;
   text-align: center;  
 }
-
+/* 
 @media (prefers-reduced-motion: no-preference) {
   .styloCarrito {
     animation: App-logo-spin infinite 5s linear;
   }
   
-} 
+}  */
 .styloCarrito{
   font-size: 3rem;
   color: #3e4142;

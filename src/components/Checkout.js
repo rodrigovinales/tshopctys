@@ -90,7 +90,7 @@ export const Checkout = () => {
 
                     :
                     <>
-                        <h1>ARCHIVO CHECKOUT</h1>
+                        <h1>DATOS PARA LA COMPRA</h1>
                         <hr />
                         <form onSubmit={handleSubmit}>
                             <input

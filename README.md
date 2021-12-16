@@ -48,3 +48,9 @@ Se utiliza JSON LocalStorage para poder guardar los items..
 
 En el proyecto se puede observar varias lineas de codigo comentadas, es sobre el Form, es para no generar peticiones innecesarias y desgastar el limite de consultas que provee Firebase Google.
 Solo se dejan cargados 5 productos, con diferentes categorias, pudiendo verlas desde el listado inicial de productos, tomando correctamente el ID generado por Firebase y la busqueda por categorias.
+
+
+### ` PROYECTO FINAL `
+
+Se aplica operacion en archivo Item.js la cual al existir stock con valor 0, aparezca un aviso indicando SIN STOCK e impidiendo el ingreso al detalle del producto.
+Se actualizan los valores de stock en cada compra en Firebase.
