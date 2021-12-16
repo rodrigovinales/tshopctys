@@ -11,11 +11,11 @@ const ItemListContainer = () => {
     const { cargando, setCargando } = useContext(LoaderContext)
     const { catId } = useParams();
     const [productos, setProductos] = useState([])
-    const [busqueda, setBusqueda] = useState('')
+    // const [busqueda, setBusqueda] = useState('')
 
-    const handleChange = (e) => {
-        setBusqueda(e.target.value)
-    }
+    // const handleChange = (e) => {
+    //     setBusqueda(e.target.value)
+    // }
 
     // useEffect(() => {
     //     setCargando(true)

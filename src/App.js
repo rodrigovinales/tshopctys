@@ -10,6 +10,7 @@ import NavBar from './components/NavBar';
 import Inicio from "./components/Inicio"
 import Cart from "./components/Cart";
 import './App.css';
+import { Checkout } from "./components/Checkout";
 
 
 
@@ -29,6 +30,7 @@ function App() {
               <Route path="/productos/:catId" element={<ItemlistContainer />} />
               <Route path="/detalle/:itemId" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout/>}/>
               <Route path="/contacto" element={<Contacto />} />
             </Routes>
             <hr />

@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
         const newCarrito = carrito.filter((prod) => prod.id !== itemId)
         setCarrito(newCarrito)
         Swal.fire({
-            title:'Producto eliminado',
+            title: 'Producto eliminado',
             timer: 1500,
             icon: 'success'
         })
@@ -60,7 +60,7 @@ export const CartProvider = ({ children }) => {
         }
         else {
             Swal.fire({
-                title:'No hay productos en carrito',
+                title: 'No hay productos en carrito',
                 timer: 1500,
                 icon: 'error'
             })
@@ -71,10 +71,13 @@ export const CartProvider = ({ children }) => {
         localStorage.setItem('carrito', JSON.stringify(carrito))
     }, [carrito])
 
+    const vaciarCarritoLuegodeCompra = () => {
+        setCarrito([])
+    }
 
 
     return (
-        <CartContext.Provider value={{ carrito, agregoACarrito, removeItem, calcularCantidad, vaciarCarrito, itemRepetido, calcularTotal }}>
+        <CartContext.Provider value={{ carrito, agregoACarrito, removeItem, calcularCantidad, vaciarCarrito, itemRepetido, calcularTotal, vaciarCarritoLuegodeCompra }}>
             {children}
         </CartContext.Provider>
     )
