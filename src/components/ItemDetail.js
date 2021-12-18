@@ -9,7 +9,7 @@ import withReactContent from 'sweetalert2-react-content'
 
 
 const ItemDetail = ({ categoria, imagen, imagen2, precio, nombre, stock, id, descripcion, tamano, compatibilidad, conexion }) => {
-
+    
     const [cantidad, setCantidad] = useState(1)
     const MySwal = withReactContent(Swal)
 

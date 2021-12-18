@@ -71,9 +71,6 @@ export const Checkout = () => {
                     alert("Hay productos en Faltantes " + outOfStock.map(el => el.nombre).join(", "))
                 }
             })
-
-
-
     }
 
     return (

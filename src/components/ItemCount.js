@@ -3,12 +3,6 @@ import minus from "../img/icon/minus.png";
 
 
 const ItemCount = ({ stock, onAdd, cantidad, setCantidad }) => {
-    // const [inicial, setInicial] = useState(1);
-        
-    // const sumarStock = ()=> inicial+1 <= stock ? setInicial(inicial + 1) ? setInicial(inicial) : inicial === stock : console.log("No hay mas productos en Stock", inicial);
-
-    // const restarCantidad = () => inicial -1 >=1 ? setInicial(inicial -1) ? setInicial(1) : inicial === 1 : console.log("Has llegado al minimo para la compra", inicial);
-    // cantidad = {inicial}
 
     const restarCantidad = () => {
         cantidad > 0 && setCantidad(cantidad - 1)
@@ -25,10 +19,8 @@ const ItemCount = ({ stock, onAdd, cantidad, setCantidad }) => {
                     <p className="conteo">{cantidad}</p>
                     <button className="btn -btn-link" onClick={sumarStock}><img className="boton-sumarItem" src={add} alt="sumar" /></button>
                 </div>
-                <button className="btn btn-sm btn-dark" onClick={onAdd}>Agregar al carrito</button>
+                <button className="btn btn-success" onClick={onAdd}>Agregar al carrito</button>
             </div>
         </div>
-
-
 }
 export default ItemCount;

@@ -4,8 +4,13 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import CartWidget from './CartWidget';
 import { Link, NavLink } from 'react-router-dom'
 import logoHeader from "../img/LOGOshopcomputers.png";
+import { useContext } from 'react';
+import { UserContext } from './Context/UserContext';
+import ModalLogin from './ModalLogin';
 
 const NavComponent = () => {
+
+  const { logged, logout, user } = useContext(UserContext)
 
   return (
 
@@ -27,11 +32,34 @@ const NavComponent = () => {
             <NavDropdown.Divider />
             <NavDropdown.Item>OFERTAS</NavDropdown.Item>
           </NavDropdown>
-          
           <NavLink className="dropdown-item" to="/contacto">CONTACTO</NavLink>
+          <Link to="cart"><CartWidget /></Link>          
+          {
+            logged
+              ?
+              <NavLink className="dropdown-item" to="/RutaAdmin">ADMIN</NavLink>
+              :
+              <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLogin">LOGIN</button>
+          }
+
         </Nav>
-        <Link to="cart"><CartWidget /></Link>
+        {
+          logged
+          ?
+          <>
+              <span style={{ 
+                color: "black", 
+                fontSize: 16,
+                
+                
+              }}>Bienvenido {user.email}, ya tiene habilitada la seccion ADMIN</span>
+              <button type="button" className="btn btn-primary mx-3" onClick={logout}>Logout</button>
+            </>
+            :
+            <></>
+          }
       </Navbar>
+      <ModalLogin />
     </header>
   )
 }
