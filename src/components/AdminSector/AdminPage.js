@@ -1,22 +1,26 @@
-import React, { useContext } from "react";
+// import React, { useContext } from "react";
+import React from "react";
+import { useParams } from 'react-router';
+
 // import { Link } from 'react-router-dom'
-import { CartContext } from "../Context/CartContext";
+import { useCollection } from "../../hooks/useCollection";
 
-const AdminPage = ({ categoria, imagen, nombre, precio, id, stock }) => {
+const AdminPage = () => {
 
 
-    const { carrito } = useContext(CartContext)
-    
-    
+    const { catId } = useParams();
+    const { productos: productos } = useCollection("productos", catId)
+
     return (
         <>
-        <div className="container mt-5" align="center">
+            <div className="container mt-5" align="center">
                 <h4>Lista de Productos</h4>
                 <div className="row">
                     <div className="col-md-12">
                         <table className="table table-bordered">
                             <thead className="thead-dark">
                                 <tr>
+                                    <th scope="col">ID</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Cantidad</th>
                                     <th scope="col">Precio</th>
@@ -24,20 +28,18 @@ const AdminPage = ({ categoria, imagen, nombre, precio, id, stock }) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {carrito.map(e => (
+                                {productos.map(e => (
                                     <tr key={e.id}>
+                                        <td>{e.id}</td>
                                         <td>{e.nombre}</td>
-                                        <td>{e.cantidad}</td>
+                                        <td>{e.stock}</td>
                                         <td>{e.precio}</td>
                                         <td><img src={`${process.env.PUBLIC_URL}/productos/${e.imagen}`} alt={e.nombre} width="50px" className="img-fluid" /></td>
-                                        
+
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
-                        
-            
-                  
                     </div>
                 </div>
             </div>

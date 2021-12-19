@@ -6,9 +6,9 @@ import { doc, getDoc } from 'firebase/firestore/lite';
 import { db } from "../Firebase/Config";
 
 const ItemDetailContainer = () => {
-  const { itemId } = useParams()
   const [item, setItem] = useState([])
 
+  const { itemId } = useParams()
 
   const { cargando, setCargando } = useContext(LoaderContext)
 
@@ -44,4 +44,6 @@ const ItemDetailContainer = () => {
   )
 }
 export default ItemDetailContainer;
+
+
 

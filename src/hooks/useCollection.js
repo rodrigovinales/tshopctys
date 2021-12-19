@@ -25,7 +25,7 @@ export const useCollection = (coleccion, catId) => {
                 .finally(() => {
                     setCargando(false)
                 })
-        
+
     }, [catId])
 
     return {
