@@ -8,9 +8,11 @@ export const CartProvider = ({ children }) => {
     const init = JSON.parse(localStorage.getItem('carrito')) || []
 
     const [carrito, setCarrito] = useState(init)
+    const [carritoMP, setCarritoMP] = useState(init)
 
     const agregoACarrito = (item) => {
         setCarrito([...carrito, item])
+        setCarritoMP([...carritoMP, item])
     }
 
     const removeItem = (itemId) => {
@@ -66,8 +68,46 @@ export const CartProvider = ({ children }) => {
             })
         }
     }
+    
+    const finalizarCompra = async () => {
+        
+        const itemsToMP = carritoMP.map((prod) => {
+            return {
+                title: prod.nombre,
+                description: "",
+                picture_url: prod.imagen,
+                category_id: "",
+                quantity: prod.cantidad,
+                currency_id: "ARS",
+                unit_price: parseFloat(prod.precio)
+            }
+        })
+
+
+        const response = await fetch('https://api.mercadopago.com/checkout/preferences', {
+            method: 'POST',
+            headers: {
+                Authorization: "Bearer TEST-2881734393029190-102119-0be5bce21ced0437ece41d29c5d99bf0-31032230"
+            },
+            body: JSON.stringify({
+                items: itemsToMP,
+                back_urls: {
+                    success: window.location.href,
+                    failure: window.location.href
+                }
+
+            })
+        })
+        const data = await response.json()
+        vaciarCarritoLuegodeCompra()
+        window.location.replace(data.init_point)
+    }
+
+
+
 
     useEffect(() => {
+
         localStorage.setItem('carrito', JSON.stringify(carrito))
     }, [carrito])
 
@@ -76,8 +116,9 @@ export const CartProvider = ({ children }) => {
     }
 
 
+
     return (
-        <CartContext.Provider value={{ carrito, agregoACarrito, removeItem, calcularCantidad, vaciarCarrito, itemRepetido, calcularTotal, vaciarCarritoLuegodeCompra }}>
+        <CartContext.Provider value={{ carrito, agregoACarrito, removeItem, calcularCantidad, vaciarCarrito, itemRepetido, calcularTotal, vaciarCarritoLuegodeCompra, finalizarCompra }}>
             {children}
         </CartContext.Provider>
     )

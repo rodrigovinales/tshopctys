@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import ItemDetail from "../components/ItemDetail";
 import { useParams } from 'react-router'
-// import GetDatos from "../helpers/GetDatos"
 import { LoaderContext } from '../components/Context/LoaderContext';
-
-
 import { doc, getDoc } from 'firebase/firestore/lite';
 import { db } from "../Firebase/Config";
 

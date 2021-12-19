@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from 'react'
-// import GetDatos from "../helpers/GetDatos"
 import ItemList from "../components/ItemList/ItemList";
 import { LoaderContext } from '../components/Context/LoaderContext';
 import { useParams } from 'react-router';
@@ -11,29 +10,6 @@ const ItemListContainer = () => {
     const { cargando, setCargando } = useContext(LoaderContext)
     const { catId } = useParams();
     const [productos, setProductos] = useState([])
-    
-    // const [busqueda, setBusqueda] = useState('')
-
-    // const handleChange = (e) => {
-    //     setBusqueda(e.target.value)
-    // }
-
-    // useEffect(() => {
-    //     setCargando(true)
-    //     setTimeout(() => {
-    //         GetDatos()
-    //             .then(datos => {
-    //                 if (!busqueda) {
-    //                     setProductos(datos)
-    //                 } else {
-    //                     setProductos(datos.filter(prod => prod.nombre.toLowerCase().includes(busqueda.toLowerCase())))
-    //                 }
-    //             })
-    //             .finally(() => {
-    //                 setCargando(false)
-    //             });
-    //     }, 500)
-    // }, [busqueda])
 
     useEffect(() => {
         setCargando(true)
@@ -58,15 +34,6 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
-            {/* <form>
-                <input
-                    className="form-control"
-                    type="text"
-                    placeholder="Ingresa el producto a buscar"
-                    value={busqueda}
-                    onChange={handleChange}
-                />
-            </form> */}
             {
                 cargando
                     ?

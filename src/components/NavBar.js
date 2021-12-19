@@ -10,7 +10,7 @@ import ModalLogin from './ModalLogin';
 
 const NavComponent = () => {
 
-  const { logged, logout, user } = useContext(UserContext)
+  const { logged, logout } = useContext(UserContext)
 
   return (
 
@@ -49,10 +49,8 @@ const NavComponent = () => {
           <>
               <span style={{ 
                 color: "black", 
-                fontSize: 16,
-                
-                
-              }}>Bienvenido {user.email}, ya tiene habilitada la seccion ADMIN</span>
+                fontSize: 14,
+              }}>Habilitada la seccion ADMIN</span>
               <button type="button" className="btn btn-primary mx-3" onClick={logout}>Logout</button>
             </>
             :
