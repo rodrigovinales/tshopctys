@@ -1,37 +1,35 @@
 import { useEffect, useState } from 'react'
 import { collection, query, where, getDocs } from 'firebase/firestore/lite'
-import { db } from '../firebase/config'
+import { db } from "../Firebase/Config";
 
 
-export const useCollection = (name, catId) => {
 
-    const [loading, setLoading] = useState(false)
-    const [data, setData] = useState([])
+export const useCollection = (coleccion, catId) => {
+
+    const [cargando, setCargando] = useState(false)
+    const [productos, setProductos] = useState([])
 
     useEffect(() => {
-        setLoading(true)
-       
-        // 1.- armar la referencia
-        const productosRef = collection(db, name)
-        const q = catId ? query(productosRef, where('category', '==', catId)) : productosRef
-        // 2.- GET a esa ref
-        getDocs(q)
-            .then((collection) => {
-                const items = collection.docs.map((doc) => ({
-                    id: doc.id,
-                    ...doc.data()
-                }))
-
-                setData(items)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-
+        setCargando(true)
+        const collectionRef = collection(db, coleccion)
+            const q = catId ? query(collectionRef, where('categoria', '==', catId)) : collectionRef
+            getDocs(q)
+                .then((snapshot) => {
+                    const items = snapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        ...doc.data()
+                    })
+                    )
+                    setProductos(items)
+                })
+                .finally(() => {
+                    setCargando(false)
+                })
+        
     }, [catId])
 
     return {
-        loading,
-        data
+        cargando,
+        productos
     }
 }
