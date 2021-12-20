@@ -8,7 +8,7 @@ import withReactContent from 'sweetalert2-react-content'
 
 
 
-const ItemDetail = ({ categoria, imagen, imagen2, precio, nombre, stock, id, descripcion, tamano, compatibilidad, conexion }) => {
+const ItemDetail = ({ categoria, imagen, precio, nombre, stock, id, descripcion, tamano, compatibilidad, conexion }) => {
     
     const [cantidad, setCantidad] = useState(1)
     const MySwal = withReactContent(Swal)
@@ -51,7 +51,6 @@ const ItemDetail = ({ categoria, imagen, imagen2, precio, nombre, stock, id, des
                         <p className="titleSmall">IVA NO INCLUIDO</p>
                         <div className="imgItemDetail">
                             <img src={`${process.env.PUBLIC_URL}/productos/${imagen}`} className="imgDetail" alt="" />
-                            <img src={`${process.env.PUBLIC_URL}/productos/${imagen2}`} className="imgDetail" alt="" />
                         </div>
                     </div>
                 </div>
@@ -64,13 +63,13 @@ const ItemDetail = ({ categoria, imagen, imagen2, precio, nombre, stock, id, des
                             <p>{descripcion}</p>
                         </li>
                         <li>
-                            <p>DIMENSIONES: {tamano}</p>
+                            {tamano === "" ? <p>DIMENSIONES: NO ESPECIFICA</p> : <p>DIMENSIONES: {tamano}</p>}
                         </li>
                         <li>
-                            <p>COMPATIBILIDAD: {compatibilidad}</p>
+                            {compatibilidad === "" ? <p>COMPATIBILIDAD: NO ESPECIFICA</p> : <p>COMPATIBILIDAD: {compatibilidad}</p> }
                         </li>
                         <li>
-                            <p>CONEXION: {conexion}</p>
+                            {conexion === "" ? <p>CONEXION: NO ESPECIFICA </p> : <p>CONEXION: {conexion}</p>}
                         </li>
                     </ul>
                     <div className="container stylingShop">
