@@ -55,7 +55,7 @@ const ItemDetail = ({ categoria, imagen, precio, nombre, stock, id, descripcion,
                     </div>
                 </div>
 
-                <div className="card container detalleProducto">
+                <div className="detalleProducto">
                     <h1>{nombre}</h1>
                     <p>Lo que tenés que saber de este producto</p>
                     <ul className="descripcionFont">
@@ -72,7 +72,8 @@ const ItemDetail = ({ categoria, imagen, precio, nombre, stock, id, descripcion,
                             {conexion === "" ? <p>CONEXION: NO ESPECIFICA </p> : <p>CONEXION: {conexion}</p>}
                         </li>
                     </ul>
-                    <div className="container stylingShop">
+                    <hr/>
+                    <div className="stylingShop">
                         <button className="btn btn-outline-primary disabled"> STOCK DISPONIBLE: {stock}</button>
                         {
                             itemRepetido(id)

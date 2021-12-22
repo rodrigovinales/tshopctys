@@ -12,9 +12,9 @@ const CartWidget = () => {
    }
 
    return (
-      <div>
-         <FaCartPlus className="styloCarrito"/>
-         <span>{ calcularCantidad() }</span>
+      <div className="styloCarrito">
+         <FaCartPlus/>
+         <span className='numberCarrito'>{ calcularCantidad() }</span> 
       </div>
    )
 

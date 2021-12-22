@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
 .App {
   text-align: center;
 }
-.contenedorNav{
+.contenedorNav {
   display: flex;
   margin: 0 0 0 5px;
 }
@@ -20,11 +20,11 @@
 }
 .navbar {
   width: 100%;
-  background-image: linear-gradient(to right, #F5FAFC, #46A3C3);
+  background-image: linear-gradient(to right, #f5fafc, #46a3c3);
 }
 .nav-link {
   margin: 0 20px 0 20px;
-  text-align: center;  
+  text-align: center;
 }
 /* 
 @media (prefers-reduced-motion: no-preference) {
@@ -33,20 +33,23 @@
   }
   
 }  */
-.styloCarrito{
+.styloCarrito {
   font-size: 3rem;
-  color: #3e4142;
+  color: rgb(68, 67, 67);
+  display: flex;
 }
 .styloCarritoVacio {
   visibility: hidden;
 }
-
-.numeroCarrito{
+.numberCarrito {
+  font-size: 2rem;
   font-weight: 900;
-  font-family: 'Courier New', Courier, monospace;
-}
+  color: black;
+  margin: 1px 15px 1px 15px;
+  font-family: "Montserrat", sans-serif;}
+  
 .App-header {
-  background-image: linear-gradient(to right, #F5FAFC, #46A3C3);
+  background-image: linear-gradient(to right, #f5fafc, #46a3c3);
   /* min-height: 100vh; */
   /* display: flex; */
   flex-direction: column;
@@ -69,9 +72,8 @@
   }
 }
 .botonera {
-  display:flex;
+  display: flex;
   justify-content: center;
-  
 }
 .conteo {
   font-size: 30px;
@@ -82,18 +84,18 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-color:red;
+  background-color: red;
   border-radius: 100%;
 }
-.boton-sumarItem{
+.boton-sumarItem {
   width: 30px;
   height: 30px;
-  cursor: pointer;   
+  cursor: pointer;
   background-color: green;
   border-radius: 100%;
 }
 .list_products {
-  display:inline-table;
+  display: inline-table;
   justify-content: space-around;
   border-radius: 5px;
   width: 200px;
@@ -105,12 +107,21 @@
   font-weight: bold;
   color: black;
 }
+.estiloenDetalle {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+.estilosenDetalle {
+  text-align: -webkit-center;
+}
 
 .stylingCard {
   text-align: center;
   font-size: 14px;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .stylingCard_h6 {
   font-size: 20px;
@@ -120,10 +131,10 @@
   text-align: center;
   width: 300px;
   display: flex;
-
 }
 .stylingShop {
-  display: block
+  display: block;
+  text-align: center;
 }
 .titleSmall {
   font-size: 12px;
@@ -131,18 +142,19 @@
 .descripcionFont {
   font-size: 12px;
 }
-.detalleProducto{
-  background-color: rgb(176, 182, 174);
+.detalleProducto {
   width: 400px;
+  border: solid black 1px;
 }
-.imgDetail{
+.imgDetail {
   border: solid 2px black;
   width: 50%;
   height: 50%;
   border-radius: 5px;
   margin: 5px;
 }
-.imgItemDetail ,.stylingItemDetail{
+.imgItemDetail,
+.stylingItemDetail {
   display: flex;
 }
 .carritoVacioDetail {
@@ -156,8 +168,7 @@
   text-align: center;
   border: 2px solid black;
   border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: "Montserrat", sans-serif;
 }
 .stylingItemDetail span {
   font-size: 25px;
@@ -171,15 +182,14 @@
 .mapCenter {
   text-align: center;
 }
-.loadingMessage{
+.loadingMessage {
   text-align: center;
   margin: 100px auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: rgb(39, 22, 189);
   font-weight: 900;
-
 }
- .animateCargando {
+.animateCargando {
   margin: 100px auto;
   width: 80px;
   height: 80px;
@@ -194,18 +204,26 @@
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .botonRemoveItem {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 300;
-  color:  red;
+  color: red;
   cursor: pointer;
   text-align: center;
 }

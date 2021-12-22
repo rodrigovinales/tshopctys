@@ -12,8 +12,9 @@ const ItemCount = ({ stock, onAdd, cantidad, setCantidad }) => {
         cantidad < stock && setCantidad(cantidad + 1)
     }
 
-    return <div>
-        <div className="card">
+    return <>
+    <div className="estilosenDetalle">
+        <div className="estiloenDetalle">
                 <div className="botonera">
                     <button className="btn btn-link" onClick={restarCantidad}><img className="boton-eliminarItem" src={minus} alt="restar" /></button>
                     <p className="conteo">{cantidad}</p>
@@ -21,6 +22,7 @@ const ItemCount = ({ stock, onAdd, cantidad, setCantidad }) => {
                 </div>
                 <button className="btn btn-success" onClick={onAdd}>Agregar al carrito</button>
             </div>
-        </div>
+            </div>
+        </>
 }
 export default ItemCount;

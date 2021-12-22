@@ -13,7 +13,7 @@ const Item = ({ categoria, imagen, nombre, precio, id, stock }) => {
                     <p className="titleSmall">IVA NO INCLUIDO</p>
                 </div>
                 {
-                    stock === 0 ? <button className="btn btn-danger disabled">SIN STOCK</button>
+                    stock <= 0 ? <button className="btn btn-danger disabled">SIN STOCK</button>
                     :
                     <Link to={`/detalle/${id}`} className="btn btn-success">VER PRODUCTO</Link>
                 }

@@ -33,7 +33,7 @@ const NavComponent = () => {
             <NavDropdown.Item>OFERTAS</NavDropdown.Item>
           </NavDropdown>
           <NavLink className="dropdown-item" to="/contacto">CONTACTO</NavLink>
-          <Link to="cart"><CartWidget /></Link>          
+          <Link to="cart" style={{ textDecoration: 'none' }}><CartWidget /></Link>          
           {
             logged
               ?
