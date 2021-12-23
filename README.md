@@ -26,7 +26,7 @@ Si bien visualmente todavia no esta perfectamente logrado, se puede observar que
 
 ### `Muestra del proyecto e Implementacion con Firebase`
 
-https://www.loom.com/share/e08b33ae4ada4683b6daa888f412230a
+https://www.loom.com/share/36c19b0d73674eb6a4801747180c8540
 
 Aqui comparto la muestra del proyecto. En la misma se puede observar que se realiza la navegacion en distintas solapas, actualizando el estado de la misma, o por categorias en este caso, teniendo un producto o mas, dependendiendo de la cantidad que exista en cada categoria. Luego al seleccionar un item, se puede elegir la cantidad (No pudiendo realizar el agregado al carrito si la cantidad es 0).
 En caso de no existir stock del producto, aparece debajo del item dicha leyenda, y no pudiendo ingresar al detalle de la misma.
