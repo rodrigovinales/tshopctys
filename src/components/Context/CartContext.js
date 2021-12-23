@@ -18,6 +18,7 @@ export const CartProvider = ({ children }) => {
     const removeItem = (itemId) => {
         const newCarrito = carrito.filter((prod) => prod.id !== itemId)
         setCarrito(newCarrito)
+        setCarritoMP(newCarrito)
         Swal.fire({
             title: 'Producto eliminado',
             timer: 1500,
