@@ -1,4 +1,4 @@
-# Primera Entrega del Proyecto Final
+# Entrega del Proyecto Final
 
 La intencion del proyecto es mejorar el actual sitio web [ShopComputers](http://www.shopcomputers.com.ar/).
 La empresa es real, existiendo en la zona oeste del Gran Buenos Aires. Trata de venta de insumos informaticos.
