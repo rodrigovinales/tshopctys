@@ -3,10 +3,7 @@
 .App {
   text-align: center;
 }
-.contenedorNav {
-  display: flex;
-  margin: 0 0 0 5px;
-}
+
 .logoHeader {
   height: 200px;
 }
@@ -22,10 +19,7 @@
   width: 100%;
   background-image: linear-gradient(to right, #f5fafc, #46a3c3);
 }
-.nav-link {
-  margin: 0 20px 0 20px;
-  text-align: center;
-}
+
 /* 
 @media (prefers-reduced-motion: no-preference) {
   .styloCarrito {
@@ -126,37 +120,7 @@
 .stylingCard_h6 {
   font-size: 20px;
 }
-.stylingCard_ItemDetail {
-  background-color: whitesmoke;
-  text-align: center;
-  width: 300px;
-  display: flex;
-}
-.stylingShop {
-  display: block;
-  text-align: center;
-}
-.titleSmall {
-  font-size: 12px;
-}
-.descripcionFont {
-  font-size: 12px;
-}
-.detalleProducto {
-  width: 400px;
-  border: solid black 1px;
-}
-.imgDetail {
-  border: solid 2px black;
-  width: 50%;
-  height: 50%;
-  border-radius: 5px;
-  margin: 5px;
-}
-.imgItemDetail,
-.stylingItemDetail {
-  display: flex;
-}
+
 .carritoVacioDetail {
   display: block;
   text-align: -webkit-center;
@@ -220,16 +184,23 @@
     transform: rotate(360deg);
   }
 }
-.botonRemoveItem {
+.inputProductos {
+  font-weight: 900;
   font-family: "Montserrat";
-  font-weight: 300;
-  color: red;
-  cursor: pointer;
-  text-align: center;
-}
-.botonRemoveItem:hover {
-  background-color: red;
   color: black;
   font-size: 20px;
+  border-color: #000;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.inputProductos:hover {
+  cursor: pointer;
+  background-color: #86C3D8;
+}
+
+.dollar{
+  color: red;
   font-weight: 900;
 }

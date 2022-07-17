@@ -1,156 +1,196 @@
-footer{
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+footer {
+  width: 100%;
+  background-image: linear-gradient(to right, #F5FAFC, #46A3C3);
+  color: white;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+}
+
+.container-footer-all {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+
+}
+
+.container-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colum1 {
+  max-width: 400px;
+}
+
+.colum1 p {
+  font-size: 12px;
+  color: #101010;
+}
+
+.colum1 h2 {
+  font-size: 14px;
+  color: black;
+  margin-top: 20px;
+}
+
+.colum2 {
+  max-width: 400px;
+
+}
+
+.colum2 h1 {
+  font-size: 22px;
+  color: #101010;
+}
+
+.footer__row {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer__img {
+  font-size: 40px;
+}
+
+.footer__img--whatsapp {
+  color: green;
+}
+
+.footer__row label {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: black;
+}
+
+.colum3 {
+  max-width: 400px;
+}
+
+.colum3 h1 {
+  font-size: 22px;
+  color: #101010;
+}
+
+.row2 {
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.row2 label {
+  margin-top: 10px;
+  margin-left: 20px;
+  max-width: 150px;
+  text-align: center;
+  color: #101010;
+}
+
+.row2 a {
+  text-decoration: none;
+  color: black;
+}
+
+.container-footer {
+  width: 100%;
+  background: #101010;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.copyright {
+  color: #C7C7C7;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.information a {
+  text-decoration: none;
+  color: #C7C7C7;
+}
+
+@media screen and (max-width:375px) {
+
+  footer {
     width: 100%;
-    background-image: linear-gradient(to right, #F5FAFC, #46A3C3);
-    color: white;   
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    
   }
-  
-  .container-footer-all{
+
+  .container-footer-all {
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px;
-    
   }
-  
-  .container-body{
-    display: flex;
-    justify-content: space-between;
+
+  .inputCenter {
+    font-size: 10px;
+    font-weight: bolder;
   }
-  
-  .colum1{
-    max-width: 400px;
+}
+
+.imagenEnFooter {
+  width: 400px;
+}
+
+
+
+
+@media screen and (max-width: 1100px) {
+
+  .container-body {
+    flex-wrap: wrap;
   }
-  
-  .colum1 p{
-    font-size: 12px;
-    color: #101010;
+
+  .colum1 {
+    max-width: 100%;
   }
-  
-  .colum1 h2{
-    font-size: 14px;
-    color: black;
-    margin-top: 20px;
+
+  .colum2,
+  .colum3 {
+    margin-top: 40px;
   }
-  
-  .colum2{
-    max-width: 400px;
-    
-  }
-  
-  .colum2 h1{
-    font-size: 22px;
-    color: #101010;
-  }
-  
-  .footer__row{
-    margin-top: 20px;
-    display: flex;
-  }
-  
-  .footer__img{
-    font-size: 40px;
-  }
-  .footer__img--whatsapp{
-    color: green;
-  }
-  
-  .footer__row label{
-    margin-top: 10px;
-    margin-left: 20px;
-    color: black;
-  }
-  
-  .colum3{
-    max-width: 400px;
-  }
-  
-  .colum3 h1{
-    font-size: 22px;
-    color: #101010;
-  }
-  
-  .row2{
-    margin-top: 20px;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-  }
-  
-  .row2 label{
-    margin-top: 10px;
-    margin-left: 20px;
-    max-width: 150px;
-    text-align: center;
-    color: #101010;
-  }
-  .row2 a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .container-footer{
-    width: 100%;  
-    background: #101010;
-  }
-  
-  .footer{
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  .copyright{
-    color: #C7C7C7;
-    text-align: center;
-  }
-  
-  .copyright a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .information a{
-    text-decoration: none;
-    color: #C7C7C7;
-  }
-  
-  @media screen and (max-width:375px) {
-  
-      footer{
-        width: 100%;  
-      }
-      .container-footer-all{
-        width: 100%;
-      }
-      .inputCenter {
-        font-size: 10px;
-        font-weight: bolder;
-      }
-  }
-  
-  .imagenEnFooter {
-    width: 400px;
-  }
-  
-  
-  
-  
-  @media screen and (max-width: 1100px){
-  
-    .container-body{
-        flex-wrap: wrap;
-    }
-    
-    .colum1{
-        max-width: 100%;
-    }
-    
-    .colum2,
-    .colum3{
-        margin-top: 40px;
-    }
-  }
+}
+
+
+/* FOOTER TARJETAS  */
+.footer-bottom {
+  margin-bottom: 10px;
+}
+
+.cash-out {
+  padding: 0;
+	/* margin-bottom: 0px; */
+}
+.cash-out li {
+  float: left;
+  list-style:none;
+}
+.cash-out li {
+  padding-right: 10px;
+}
+.cash-out li img {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+  height: 46px;
+  width: 80px;
+  margin: 20px;
+}
+.cash-out img:hover {
+	opacity: 0.7;
+}

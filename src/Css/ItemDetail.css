@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.descripcionFont {
+  font-size: 16px;
+  list-style:none;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.stylingCard_ItemDetail {
+  background-color: whitesmoke;
+  text-align: center;
+  width: 800px;
+  display: flex;
+}
+
+.imgItemDetail {
+  width: 450px;
+  height: 400px;
+}
+.stylingShop {
+  display: block;
+  text-align: center;
+}
+
+.imgDetail {
+  border: solid 2px black;
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.imgItemDetail,
+.stylingItemDetail {
+  display: flex;
+}
+
+.detalleProducto {
+  width: 600px;
+  border: solid black 1px;
+  /* height: auto; */
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer-bottom {
+  margin-bottom: 10px;
+}
+
+.cash-out {
+  padding: 0;
+	/* margin-bottom: 0px; */
+}
+.cash-out li {
+  float: left;
+  
+}
+.cash-out li {
+  padding-right: 10px;
+}
+.cash-out li img {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+  height: 46px;
+  width: 80px;
+  margin: 20px;
+}
+.cash-out img:hover {
+	opacity: 0.7;
+}
+
+.hOneItemDet {
+  text-align: center;
+}
+.pStyling {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.precioBig{
+  font-family: "Montserrat";
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.titleSmall {
+  font-size: 12px;
+}

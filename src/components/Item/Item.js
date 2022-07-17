@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import dollar from "../../data/Productos"
 
 const Item = ({ categoria, imagen, nombre, precio, id, stock }) => {
+
     return (
         <div className="list_products">
             <div key={id} className="card stylingCard">
@@ -9,8 +11,8 @@ const Item = ({ categoria, imagen, nombre, precio, id, stock }) => {
                 <img src={`${process.env.PUBLIC_URL}/productos/${imagen}`} className="card-img-top" alt="imagen" />
                 <p className="card-title">{nombre}</p>
                 <div className="card-body">
-                    <span className="btn btn-dark disabled">$ {precio} </span>
-                    <p className="titleSmall">IVA NO INCLUIDO</p>
+                    <span className="btn btn-dark disabled">$ {precio*dollar.toFixed(2)} </span>
+                    <p className="titleSmall">IVA INCLUIDO</p>
                 </div>
                 {
                     stock <= 0 ? <button className="btn btn-danger disabled">SIN STOCK</button>

@@ -1,0 +1,20 @@
+.sizeImg {
+    height: 350px;
+}
+
+
+
+.titleCarousel,
+.titleCarousel_parrafo {
+    color: #000;
+    font-size: 28px;
+    font-family: "Montserrat";
+    font-weight: 900;
+    margin-left: 700px;
+}
+
+.titleCarousel_parrafo {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}

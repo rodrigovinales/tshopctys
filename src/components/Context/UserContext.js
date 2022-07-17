@@ -17,7 +17,7 @@ export const UserContextProvider = ({children}) => {
         })
         .catch((error) => {
             const errorMessage = error.message;
-            alert(errorMessage)
+            alert("Datos incorrectos")
         })
     }
     const logout = () => {

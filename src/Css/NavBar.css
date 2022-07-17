@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+.App-header {
+  background-image: linear-gradient(to right, #f5fafc, #46a3c3);
+  /* min-height: 50vh; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* font-size: calc(10px + 2vmin); */
+  /* color: white; */
+}
+
+.navOptiones {
+  font-size: 80%;
+  margin: 5px;
+}
+
+.probando {
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
