@@ -13,9 +13,10 @@ const NavComponent = () => {
   const { logged, logout } = useContext(UserContext)
 
   return (
-
+<>
     <header className="App-header">
       <Link to="/"><img src={logoHeader} className="logoHeader col-6" alt="logoHeader" /></Link>
+      </header>
       <Navbar expand="sm" collapseOnSelect>
 
         <Nav>
@@ -129,7 +130,7 @@ const NavComponent = () => {
             variant="secondary"
             title="MONITORES">MONITORES
           </Button>
-          
+
           <Button
             className="d-inline mx-1"
             href="/contacto"
@@ -161,7 +162,8 @@ const NavComponent = () => {
         }
       </Navbar>
       <ModalLogin />
-    </header>
+      </>
+    
   )
 }
 
