@@ -13,9 +13,9 @@ const NavComponent = () => {
   const { logged, logout } = useContext(UserContext)
 
   return (
-<>
-    <header className="App-header">
-      <Link to="/"><img src={logoHeader} className="logoHeader col-6" alt="logoHeader" /></Link>
+    <>
+      <header className="App-header">
+        <Link to="/"><img src={logoHeader} className="logoHeader col-6" alt="logoHeader" /></Link>
       </header>
       <Navbar expand="sm" collapseOnSelect>
 
@@ -162,8 +162,8 @@ const NavComponent = () => {
         }
       </Navbar>
       <ModalLogin />
-      </>
-    
+    </>
+
   )
 }
 
